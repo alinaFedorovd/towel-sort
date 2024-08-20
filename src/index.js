@@ -2,5 +2,19 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  return [];
+    let newArr = [];
+
+    if (!matrix || matrix.length === 0) return newArr;
+      
+    for (let i = matrix.length; i < matrix.length; i--) {
+  
+      if (i % 2 === 0) {
+        newArr = newArr.concat(matrix[i]);
+      } else { 
+        newArr = newArr.concat(matrix[i].reverse());
+      }
+    }
+    
+    return newArr;
+
 }
